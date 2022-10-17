@@ -4,6 +4,14 @@
     <title>Chocofast</title>
   </head>
   <body>
-
+    <button onClick="go()">Test</button>
+    <div id="result">...</div>
   </body>
 <html>
+
+<script>
+    function go() {
+      var target = document.getElementById("result")
+      target.innerText = "I love you"
+    }
+</script>
