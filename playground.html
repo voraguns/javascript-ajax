@@ -1,14 +1,28 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-
+     <title>Universe Siam Bank</title>
   </head>
   <body>
-
+     <button onClick="refresh()">Refresh</button>
+     <div id="price">...</div>
   </body>
-</html
+</html>
 
 <script>
+    function refresh() {
+       var url = "https://api.coinbase.com/v2/prices/BTC-USD/spot"
+       fetch(url).then(convert).then(show)
+       var target = document.getElementById("price")
+       target.innerText = "Reading...."
+    }
     
+    function convert(data) {
+       return data.text()
+    }
 
+    function show(data) {
+       var target = document.getElementById("price")
+       target.innerText = data
+    }
 </script>
