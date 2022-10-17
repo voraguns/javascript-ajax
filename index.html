@@ -4,14 +4,19 @@
     <title>Chocofast</title>
   </head>
   <body>
-    <button onClick="go()">Test</button>
+    <button onClick="love()">Love</button>
+    <button onClick="hate()">Hate</button>
     <div id="result"></div>
   </body>
 <html>
 
 <script>
-    function go() {
+    function love() {
       var target = document.getElementById("result")
       target.innerHTML += "love<br>"
+    }
+    function hate() {
+      var target = document.getElementById("result")
+      target.innerHTML += "hate<br>"
     }
 </script>
